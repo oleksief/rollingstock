@@ -36,6 +36,9 @@ public abstract class AbstractMain {
 	 */
 	protected SysSession mainSession = null;
 	
+	// just test for committing
+	// ADAP-WS14-HW03
+	
 	/**
 	 * 
 	 */
