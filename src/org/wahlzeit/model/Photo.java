@@ -23,6 +23,7 @@ package org.wahlzeit.model;
 import java.sql.*;
 import java.net.*;
 
+import org.wahlzeit.location.*;
 import org.wahlzeit.services.*;
 import org.wahlzeit.utils.*;
 
@@ -90,6 +91,11 @@ public class Photo extends DataObject {
 	 * 
 	 */
 	protected Tags tags = Tags.EMPTY_TAGS;
+	
+	/**
+	 * 
+	 */
+	protected Location location;
 
 	/**
 	 * 
@@ -470,6 +476,23 @@ public class Photo extends DataObject {
 	 */
 	public void setTags(Tags newTags) {
 		tags = newTags;
+		incWriteCount();
+	}
+	
+	/**
+	 * 
+	 * @methodtype get
+	 */
+	public Location getLocation() {
+		return location;
+	}
+	
+	/**
+	 * 
+	 * @methodtype set
+	 */
+	public void setLocation(Location newLocation) {
+		location = newLocation;
 		incWriteCount();
 	}
 	

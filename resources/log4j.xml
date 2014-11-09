@@ -20,7 +20,7 @@
 
 	<root>
 		<priority value="debug" />
-		<appender-ref ref="file" />
+		<!--<appender-ref ref="file" /> -->
 		<appender-ref ref="stdout" />
 	</root>
 
