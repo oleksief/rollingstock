@@ -25,7 +25,7 @@ public class CartesianLocation extends AbstractLocation {
 	 * Gets coordinate x
 	 * @methodtype get
 	 */
-	public double getCoordinateX() {
+	public double getX() {
 		return x;
 	}
 	
@@ -33,7 +33,7 @@ public class CartesianLocation extends AbstractLocation {
 	 * Gets coordinate y
 	 * @methodtype get
 	 */
-	public double getCoordinateY() {
+	public double getY() {
 		return y;
 	}
 	
@@ -41,7 +41,7 @@ public class CartesianLocation extends AbstractLocation {
 	 * Gets coordinate z
 	 * @methodtype get
 	 */
-	public double getCoordinateZ() {
+	public double getZ() {
 		return z;
 	}
 	
@@ -49,7 +49,7 @@ public class CartesianLocation extends AbstractLocation {
 	 * Sets coordinate x
 	 * @methodtype set
 	 */
-	public void setCoordinateX(double x) {
+	public void setX(double x) {
 		this.x = x;
 	}
 	
@@ -57,7 +57,7 @@ public class CartesianLocation extends AbstractLocation {
 	 * Sets coordinate y
 	 * @methodtype set
 	 */
-	public void setCoordinateY(double y) {
+	public void setY(double y) {
 		this.y = y;
 	}
 	
@@ -65,7 +65,7 @@ public class CartesianLocation extends AbstractLocation {
 	 * Sets coordinate z
 	 * @methodtype set
 	 */
-	public void setCoordinateZ(double z) {
+	public void setZ(double z) {
 		this.z = z;
 	}
 	

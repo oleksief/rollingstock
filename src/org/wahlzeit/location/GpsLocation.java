@@ -45,7 +45,8 @@ public class GpsLocation extends AbstractLocation {
 	 * Sets latitude of GPS
 	 * @methodtype set
 	 */
-	public void setLatitude(double latitude) {
+	public void setLatitude(double latitude) throws IllegalArgumentException {
+		assertIsValidLatitude(latitude);
 		this.latitude = latitude;
 	}
 	
@@ -53,7 +54,8 @@ public class GpsLocation extends AbstractLocation {
 	 * Sets longitude of GPS
 	 * @methodtype set
 	 */
-	public void setLongitude(double longitude) {
+	public void setLongitude(double longitude) throws IllegalArgumentException {
+		assertIsValidLongitude(longitude);
 		this.longitude = longitude;
 	}
 	
