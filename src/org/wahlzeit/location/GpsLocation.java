@@ -81,8 +81,10 @@ public class GpsLocation extends AbstractLocation {
 	 * @methodtype assertion
 	 */
 	protected void assertIsValidLongitude(double longitude)  throws IllegalArgumentException{
-		if (longitude < 180.0 && longitude > 180.0)
+		if (longitude < -180.0 && longitude > 180.0)
 			throw new IllegalArgumentException("Longitude has invalid value!");
 	}
+
+	
 
 }
