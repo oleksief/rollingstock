@@ -43,6 +43,14 @@ public class RollingStockPhoto extends Photo {
 		readFrom(rset);
 	}
 	
+	/**
+	 * 
+	 * @methodtype constructor
+	 */
+	public RollingStockPhoto(Photo photo) {
+		super(photo.getId());		
+	}
+	
 	@Override
 	public void readFrom(ResultSet rset) throws SQLException {
 		super.readFrom(rset);

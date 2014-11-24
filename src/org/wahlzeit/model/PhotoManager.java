@@ -25,6 +25,7 @@ import java.sql.*;
 import java.util.*;
 
 import org.wahlzeit.main.*;
+import org.wahlzeit.rollingstock.RollingStockPhoto;
 import org.wahlzeit.services.*;
 
 /**
@@ -349,6 +350,14 @@ public class PhotoManager extends ObjectManager {
 		Photo result = PhotoUtil.createPhoto(file, id);
 		addPhoto(result);
 		return result;
+	}
+	
+	/**
+	 * creates new RollingStockPhoto
+	 * @return new RollingStockPhoto object
+	 */
+	public Photo createRollingStockPhoto(File file) throws Exception {
+		return new RollingStockPhoto(this.createPhoto(file));
 	}
 	
 	/**
