@@ -10,6 +10,8 @@ import org.wahlzeit.utils.EnumValue;
  * The defined solutions are CRT (Commuter and Regional Trains), HST (High-Speed Trains),
  * LRT (Light Rail and Trams), Metros and Not-Defined (None). 
  * 
+ * Value Object using Enum
+ * 
  * @author oleksief
  *
  */
@@ -51,7 +53,7 @@ public enum RollingStockSolution implements EnumValue {
 		throw new IllegalArgumentException("invalid RollingStockSolution string: " + mySolution);
 	}
 	
-	private int value = 4;
+	private final int value;
 	
 	private RollingStockSolution(int myValue) {
 		value = myValue;
