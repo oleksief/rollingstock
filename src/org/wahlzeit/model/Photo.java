@@ -23,7 +23,7 @@ package org.wahlzeit.model;
 import java.sql.*;
 import java.net.*;
 
-import org.wahlzeit.location.*;
+import org.wahlzeit.rollingstock.location.*;
 import org.wahlzeit.services.*;
 import org.wahlzeit.utils.*;
 

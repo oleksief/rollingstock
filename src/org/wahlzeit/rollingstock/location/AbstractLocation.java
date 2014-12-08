@@ -1,5 +1,5 @@
 
-package org.wahlzeit.location;
+package org.wahlzeit.rollingstock.location;
 
 /**
  * @author oleksief

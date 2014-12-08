@@ -25,7 +25,8 @@ import java.sql.*;
 import java.util.*;
 
 import org.wahlzeit.main.*;
-import org.wahlzeit.rollingstock.RollingStockPhoto;
+import org.wahlzeit.rollingstock.model.RollingStockPhoto;
+import org.wahlzeit.rollingstock.model.RollingStockPhotoFactory;
 import org.wahlzeit.services.*;
 
 /**
@@ -90,7 +91,7 @@ public class PhotoManager extends ObjectManager {
 	 * 
 	 */
 	public PhotoManager() {
-		photoTagCollector = PhotoFactory.getInstance().createPhotoTagCollector();
+		photoTagCollector = RollingStockPhotoFactory.getInstance().createPhotoTagCollector();
 	}
 	
 	/**
@@ -138,7 +139,7 @@ public class PhotoManager extends ObjectManager {
 	 * 
 	 */
 	protected Photo createObject(ResultSet rset) throws SQLException {
-		return PhotoFactory.getInstance().createPhoto(rset);
+		return RollingStockPhotoFactory.getInstance().createPhoto(rset);
 	}
 	
 	/**

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.wahlzeit.location;
+package org.wahlzeit.rollingstock.location;
 
 /**
  * A GPS location provides a GPS implementation

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.wahlzeit.rollingstock;
+package org.wahlzeit.rollingstock.model;
 
 import org.wahlzeit.utils.EnumValue;
 
@@ -17,18 +17,18 @@ import org.wahlzeit.utils.EnumValue;
  */
 public enum RollingStockSolution implements EnumValue {
 	
-	CRT(0), HST(1), LRT(2), METRO(3), NONE(4);
+	NONE(0), CRT(1), HST(2), LRT(3), METRO(4);
 	
 	/**
 	 * All possible states of RollingStockSolution
 	 */
 	private static RollingStockSolution[] allValues = {
-		CRT, HST, LRT, METRO, NONE
+		NONE, CRT, HST, LRT, METRO
 	};
 	
 	private static String[] valueNames = {
-		"Commuter and Regional Train", "High-Speed Train", 
-		"Light Rail and Tram", "Metro", "None"		
+		"None", "Commuter and Regional Train", "High-Speed Train", 
+		"Light Rail and Tram", "Metro"	
 	};
 	
 	/**
