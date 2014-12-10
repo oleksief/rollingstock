@@ -163,6 +163,8 @@ public class Photo extends DataObject {
 
 		width = rset.getInt("width");
 		height = rset.getInt("height");
+		
+		location = new GpsLocation(rset.getDouble("latitude"), rset.getDouble("longitude"));
 
 		tags = new Tags(rset.getString("tags"));
 
@@ -188,6 +190,8 @@ public class Photo extends DataObject {
 		rset.updateString("owner_home_page", ownerHomePage.toString());
 		rset.updateInt("width", width);
 		rset.updateInt("height", height);
+		rset.updateDouble("latitude", location.getLatitude());
+		rset.updateDouble("longitude", location.getLongitude());
 		rset.updateString("tags", tags.asString());
 		rset.updateInt("status", status.asInt());
 		rset.updateInt("praise_sum", praiseSum);

@@ -14,10 +14,18 @@ public class GpsLocation extends AbstractLocation {
 	private double latitude;
 	private double longitude;
 	
+	/**
+	 * Default constructor
+	 * @methodtype constructor
+	 */
 	public GpsLocation() throws IllegalArgumentException {
 		this(0., 0.);
 	}
 	
+	/**
+	 * 
+	 * @methodtype constructor
+	 */
 	public GpsLocation(double latitude, double longitude) throws IllegalArgumentException { 
 		assertIsValidLatitude(latitude);
 		assertIsValidLongitude(longitude);
@@ -60,7 +68,7 @@ public class GpsLocation extends AbstractLocation {
 	}
 	
 	/**
-	 * returns a simple human readable description
+	 * Returns a simple human readable description
 	 * @methodtype conversion
 	 */
 	public String asString() {
@@ -83,6 +91,36 @@ public class GpsLocation extends AbstractLocation {
 	protected void assertIsValidLongitude(double longitude)  throws IllegalArgumentException{
 		if (longitude < -180.0 && longitude > 180.0)
 			throw new IllegalArgumentException("Longitude has invalid value!");
+	}
+
+	/**
+	 * Converts GPS-coordinates to X-coordinate
+	 * @methodtype get
+	 */
+	@Override
+	public double getX() {
+		// TODO conversion
+		return 0.;
+	}
+
+	/**
+	 * Converts GPS-coordinates to Y-coordinate
+	 * @methodtype get
+	 */
+	@Override
+	public double getY() {
+		// TODO conversion
+		return 0.;
+	}
+
+	/**
+	 * Converts GPS-coordinates to Z-coordinate
+	 * @methodtype get
+	 */
+	@Override
+	public double getZ() {
+		// TODO conversion
+		return 0.;
 	}
 
 	

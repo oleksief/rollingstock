@@ -11,10 +11,18 @@ public class CartesianLocation extends AbstractLocation {
 
 	private double x, y, z;
 	
+	/**
+	 * 
+	 * @methodtype constructor
+	 */
 	public CartesianLocation() {
 		this(0., 0., 0.);
 	}
 	
+	/**
+	 * 
+	 * @methodtype constructor
+	 */
 	public CartesianLocation(double x, double y, double z) {
 		this.x = x;
 		this.y = y;
@@ -70,12 +78,32 @@ public class CartesianLocation extends AbstractLocation {
 	}
 	
 	/**
-	 * returns a simple human readable description
+	 * Returns a simple human readable description
 	 * @methodtype conversion
 	 */
 	@Override
 	public String asString() {
 		return "(" + x + ", " + y + ", " + z + ")";
+	}
+
+	/**
+	 * Converts Cartesian coordinates to latitude
+	 * @methodtype get
+	 */
+	@Override
+	public double getLatitude() {
+		// TODO conversion
+		return 0.;
+	}
+	
+	/**
+	 * Converts Cartesian coordinates to longitude
+	 * @methodtype get
+	 */
+	@Override
+	public double getLongitude() {
+		// TODO conversion
+		return 0.;
 	}
 
 }

@@ -25,6 +25,8 @@ CREATE TABLE photos (
 	owner_home_page text,
 	width integer,
 	height integer,
+	latitude double,
+	longitude double,
 	tags text,
 	status integer,
 	praise_sum integer,
