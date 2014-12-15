@@ -15,8 +15,7 @@ import org.wahlzeit.model.PhotoId;
  */
 public class RollingStockPhoto extends Photo {
 	
-	public static final String ROLLING_STOCK_SOLUTION = "rl_solution";
-	protected RollingStockSolution rlsolution = RollingStockSolution.NONE;
+	private RollingStock rollingStock;
 	
 	/**
 	 * 
@@ -54,35 +53,37 @@ public class RollingStockPhoto extends Photo {
 	@Override
 	public void readFrom(ResultSet rset) throws SQLException {
 		super.readFrom(rset);
-		//TODO for database extension
-		//rlsolution = RollingStockSolution.getFromInt(rset.getInt("rl_solution"));		
+		RollingStockType rsType = new RollingStockType(rset.getString("rs_type_name"), 
+				RollingStockSolution.getFromInt(rset.getInt("rs_solution")));
+		rollingStock = new RollingStock(rset.getString("rs_name"), rsType);		
 	}
 	
 	@Override
 	public void writeOn(ResultSet rset) throws SQLException {
 		super.writeOn(rset);
-		//TODO for database extension
-		//rset.updateInt("rl_solution", rlsolution.asInt());
+		assert(rollingStock != null);
+		rset.updateString("rs_name", rollingStock.getName());
+		rset.updateString("rs_type_name", rollingStock.getRsType().getName());
+		rset.updateInt("rs_solution", rollingStock.getRsType().getRollingStockSolution().asInt());
 	}
 	
 	/**
 	 * 
 	 * @methodtype get
 	 */
-	public RollingStockSolution getRollingStockSolution() {
-		assert rlsolution != null;	// pre
-		return rlsolution;
+	public RollingStock getRollingStock() {
+		assert rollingStock != null;
+		return rollingStock; 
 	}
 	
 	/**
 	 * 
 	 * @methodtype set
 	 */
-	public void setRollingStockSolution(RollingStockSolution newSolution) {
-		assert newSolution != null;	// pre
-		rlsolution = newSolution;
+	public void setRollingStock(RollingStock rollingStock) {
+		assert rollingStock != null;
+		this.rollingStock = rollingStock;
 		incWriteCount();
-		assert isDirty();			// post
 	}
 
 }
