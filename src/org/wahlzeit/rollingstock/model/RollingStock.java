@@ -5,6 +5,15 @@ package org.wahlzeit.rollingstock.model;
 
 
 /**
+ * Provides main domain functionality
+ * Provides descriptive information common to all instances of a type
+ * 
+ * @collaboration RollingstockPhoto / RollingStock
+ * @role Domain Object
+ * 
+ * @collaboration RollingStock / RollingStockType (Type Object)
+ * @role Base Object
+ * 
  * @author oleksief
  *
  */

@@ -4,6 +4,10 @@
 package org.wahlzeit.rollingstock.location;
 
 /**
+ * An interface definition for location classes
+ * 
+ * @collaboration Location
+ * @role Client
  * @author oleksief
  *
  */

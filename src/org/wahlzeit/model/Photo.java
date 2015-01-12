@@ -30,6 +30,7 @@ import org.wahlzeit.utils.*;
 /**
  * A photo represents a user-provided (uploaded) photo.
  * 
+ * @collaboration Location
  * @author dirkriehle
  *
  */

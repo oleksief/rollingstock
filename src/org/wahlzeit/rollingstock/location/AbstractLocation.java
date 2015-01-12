@@ -2,6 +2,7 @@
 package org.wahlzeit.rollingstock.location;
 
 /**
+ * @collaboration location
  * @author oleksief
  *
  */

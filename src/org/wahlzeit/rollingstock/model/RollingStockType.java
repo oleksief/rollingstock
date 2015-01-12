@@ -4,6 +4,8 @@
 package org.wahlzeit.rollingstock.model;
 
 /**
+ * @collaboration RollingStock / RollingStockType (Type Object)
+ * @role Type Object
  * @author oleksief
  *
  */

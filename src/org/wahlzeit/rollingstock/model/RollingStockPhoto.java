@@ -10,6 +10,10 @@ import org.wahlzeit.model.Photo;
 import org.wahlzeit.model.PhotoId;
 
 /**
+ * A photo represents a user-provided (uploaded) photo of Rolling stock.
+ * 
+ * @collaboration RollingstockPhoto / RollingStock
+ * @role Client
  * @author oleksief
  *
  */

@@ -6,6 +6,8 @@ package org.wahlzeit.rollingstock.location;
 /**
  * A GPS location provides a GPS implementation
  * 
+ * @collaboration Location
+ * @role Value Class
  * @author oleksief
  *
  */

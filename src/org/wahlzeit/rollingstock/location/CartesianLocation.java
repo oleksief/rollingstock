@@ -4,6 +4,10 @@
 package org.wahlzeit.rollingstock.location;
 
 /**
+ * A Cartesian location provides a Cartesian implementation
+ * 
+ * @collaboration Location
+ * @role Value Class
  * @author oleksief
  *
  */
