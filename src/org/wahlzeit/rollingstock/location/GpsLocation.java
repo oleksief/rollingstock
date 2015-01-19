@@ -20,7 +20,7 @@ public class GpsLocation extends AbstractLocation {
 	 * Default constructor
 	 * @methodtype constructor
 	 */
-	public GpsLocation() throws IllegalArgumentException {
+	public GpsLocation() throws LocationException {
 		this(0., 0.);
 	}
 	
@@ -28,7 +28,7 @@ public class GpsLocation extends AbstractLocation {
 	 * 
 	 * @methodtype constructor
 	 */
-	public GpsLocation(double latitude, double longitude) throws IllegalArgumentException { 
+	public GpsLocation(double latitude, double longitude) throws LocationException { 
 		assertIsValidLatitude(latitude);
 		assertIsValidLongitude(longitude);
 		this.latitude = latitude;
@@ -55,7 +55,7 @@ public class GpsLocation extends AbstractLocation {
 	 * Sets latitude of GPS
 	 * @methodtype set
 	 */
-	public void setLatitude(double latitude) throws IllegalArgumentException {
+	public void setLatitude(double latitude) throws LocationException {
 		assertIsValidLatitude(latitude);
 		this.latitude = latitude;
 	}
@@ -64,7 +64,7 @@ public class GpsLocation extends AbstractLocation {
 	 * Sets longitude of GPS
 	 * @methodtype set
 	 */
-	public void setLongitude(double longitude) throws IllegalArgumentException {
+	public void setLongitude(double longitude) throws LocationException {
 		assertIsValidLongitude(longitude);
 		this.longitude = longitude;
 	}
@@ -81,18 +81,18 @@ public class GpsLocation extends AbstractLocation {
 	 * Checks whether a latitude has a correct value
 	 * @methodtype assertion
 	 */
-	protected void assertIsValidLatitude(double latitude) throws IllegalArgumentException {
+	protected void assertIsValidLatitude(double latitude) throws LocationException {
 		if (latitude < -90.0 && latitude > 90.0)
-			throw new IllegalArgumentException("Latitude has invalid value!");
+			throw new LocationException("Latitude has invalid value!");
 	}
 	
 	/**
 	 * Checks whether a longitude has a correct value
 	 * @methodtype assertion
 	 */
-	protected void assertIsValidLongitude(double longitude)  throws IllegalArgumentException{
+	protected void assertIsValidLongitude(double longitude)  throws LocationException{
 		if (longitude < -180.0 && longitude > 180.0)
-			throw new IllegalArgumentException("Longitude has invalid value!");
+			throw new LocationException("Longitude has invalid value!");
 	}
 
 	/**

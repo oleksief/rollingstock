@@ -57,9 +57,15 @@ public class RollingStockPhoto extends Photo {
 	@Override
 	public void readFrom(ResultSet rset) throws SQLException {
 		super.readFrom(rset);
-		RollingStockType rsType = new RollingStockType(rset.getString("rs_type_name"), 
+		try {
+			RollingStockType rsType = new RollingStockType(rset.getString("rs_type_name"), 
 				RollingStockSolution.getFromInt(rset.getInt("rs_solution")));
-		rollingStock = new RollingStock(rset.getString("rs_name"), rsType);		
+			rollingStock = new RollingStock(rset.getString("rs_name"), rsType);	
+		} catch (IllegalArgumentException e1) {
+			System.out.println(e1.getMessage());
+		} catch (NullPointerException e2) {
+			System.out.println(e2.getMessage());
+		}		
 	}
 	
 	@Override
@@ -84,8 +90,9 @@ public class RollingStockPhoto extends Photo {
 	 * 
 	 * @methodtype set
 	 */
-	public void setRollingStock(RollingStock rollingStock) {
-		assert rollingStock != null;
+	public void setRollingStock(RollingStock rollingStock) throws NullPointerException {
+		if (rollingStock == null)
+			throw new NullPointerException("RollingStock is null.");
 		this.rollingStock = rollingStock;
 		incWriteCount();
 	}

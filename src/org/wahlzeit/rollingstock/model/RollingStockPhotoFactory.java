@@ -32,7 +32,7 @@ public class RollingStockPhotoFactory extends PhotoFactory {
 			SysLog.logSysInfo("setting generic RollingStockPhotoFactory");
 			setInstance(new RollingStockPhotoFactory());
 		}
-		assert (instance != null);
+		assert (instance != null);	// post condition
 		return instance;
 	}
 	
@@ -71,7 +71,9 @@ public class RollingStockPhotoFactory extends PhotoFactory {
 	/**
 	 * 
 	 */
-	public Photo createPhoto(PhotoId id) {
+	public Photo createPhoto(PhotoId id) throws NullPointerException {
+		if (id == null)
+			throw new NullPointerException("PhotoId is null.");
 		return new RollingStockPhoto(id);
 	}
 	

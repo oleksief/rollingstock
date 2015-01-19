@@ -165,7 +165,12 @@ public class Photo extends DataObject {
 		width = rset.getInt("width");
 		height = rset.getInt("height");
 		
-		location = new GpsLocation(rset.getDouble("latitude"), rset.getDouble("longitude"));
+		try {
+			location = new GpsLocation(rset.getDouble("latitude"), rset.getDouble("longitude"));
+		} catch (LocationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		tags = new Tags(rset.getString("tags"));
 

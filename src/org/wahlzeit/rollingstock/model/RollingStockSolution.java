@@ -35,8 +35,9 @@ public enum RollingStockSolution implements EnumValue {
 	 * Gets object of RollingStockSolution from int value
 	 * @methodtype get
 	 */
-	public static RollingStockSolution getFromInt(int myValue) {
-		assert ((myValue >= 0) && (myValue <= 4));		
+	public static RollingStockSolution getFromInt(int myValue) throws IllegalArgumentException {
+		if (myValue < 0 || myValue > 4)
+			throw new IllegalArgumentException("Invalid value of int myValue: " + myValue);
 		return allValues[myValue];		
 	}
 	
@@ -55,7 +56,10 @@ public enum RollingStockSolution implements EnumValue {
 	
 	private final int value;
 	
-	private RollingStockSolution(int myValue) {
+	private RollingStockSolution(int myValue) throws IllegalArgumentException {
+		if (myValue < 0 || myValue > 4)
+			throw new IllegalArgumentException("RollingStockSolution has failed. "
+					+ "Invalid value of int myValue: " + myValue);
 		value = myValue;
 	}
 

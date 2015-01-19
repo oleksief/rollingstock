@@ -22,7 +22,11 @@ public class RollingStock {
 	private String name;
 	private RollingStockType rsType;
 	
-	public RollingStock(String name, RollingStockType rsType) {
+	public RollingStock(String name, RollingStockType rsType) throws IllegalArgumentException, NullPointerException{
+		if (name == null || name.isEmpty())
+			throw new IllegalArgumentException("RollingStock constructor has failed. Name is null or empty.");
+		if (rsType == null)
+			throw new NullPointerException("RollingStock constructor has failed. Type is null.");
 		this.name = name;
 		this.rsType = rsType;
 	}
@@ -37,7 +41,9 @@ public class RollingStock {
 	/**
 	 * @param name the name to set
 	 */
-	public void setName(String name) {
+	public void setName(String name) throws IllegalArgumentException {
+		if (name == null || name.isEmpty())
+			throw new IllegalArgumentException("Name is null or empty.");
 		this.name = name;
 	}
 
@@ -51,7 +57,9 @@ public class RollingStock {
 	/**
 	 * @param rsType the rsType to set
 	 */
-	public void setRsType(RollingStockType rsType) {
+	public void setRsType(RollingStockType rsType) throws NullPointerException {
+		if (rsType == null)
+			throw new NullPointerException("RollingStockType is null.");
 		this.rsType = rsType;
 	}
 

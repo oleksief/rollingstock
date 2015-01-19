@@ -14,7 +14,11 @@ public class RollingStockType {
 	private String name;
 	private RollingStockSolution rsSolution;
 	
-	public RollingStockType(String name, RollingStockSolution rsSolution) {
+	public RollingStockType(String name, RollingStockSolution rsSolution) throws IllegalArgumentException, NullPointerException {
+		if (name == null || name.isEmpty())
+			throw new IllegalArgumentException("RollingStockType constructor has failed. Name is null or empty.");
+		if (rsSolution == null)
+			throw new NullPointerException("RollingStockType constructor has failed. Solution is null.");
 		this.name = name;
 		this.rsSolution = rsSolution;
 	}
@@ -31,7 +35,9 @@ public class RollingStockType {
 	 * 
 	 * @methodtype set
 	 */
-	public void setName(String name) {
+	public void setName(String name) throws IllegalArgumentException {
+		if (name == null || name.isEmpty())
+			throw new IllegalArgumentException("Name is null or empty.");
 		this.name = name;
 	}
 
@@ -48,8 +54,9 @@ public class RollingStockType {
 	 * 
 	 * @methodtype set
 	 */
-	public void setRollingStockSolution(RollingStockSolution newSolution) {
-		assert newSolution != null;	// pre
+	public void setRollingStockSolution(RollingStockSolution newSolution) throws NullPointerException {
+		if (newSolution == null)
+			throw new NullPointerException("Solution is null.");		
 		rsSolution = newSolution;
 	}
 	
