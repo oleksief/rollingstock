@@ -24,8 +24,8 @@ import java.io.File;
 import java.io.FileFilter;
 import java.sql.*;
 
+import org.rollingstock.model.RollingStockPhotoFactory;
 import org.wahlzeit.model.*;
-import org.wahlzeit.rollingstock.model.RollingStockPhotoFactory;
 import org.wahlzeit.services.*;
 import org.wahlzeit.servlets.AbstractServlet;
 import org.wahlzeit.webparts.*;

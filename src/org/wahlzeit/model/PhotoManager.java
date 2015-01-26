@@ -24,9 +24,9 @@ import java.io.*;
 import java.sql.*;
 import java.util.*;
 
+import org.rollingstock.model.RollingStockPhoto;
+import org.rollingstock.model.RollingStockPhotoFactory;
 import org.wahlzeit.main.*;
-import org.wahlzeit.rollingstock.model.RollingStockPhoto;
-import org.wahlzeit.rollingstock.model.RollingStockPhotoFactory;
 import org.wahlzeit.services.*;
 
 /**

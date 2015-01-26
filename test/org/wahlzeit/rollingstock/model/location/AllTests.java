@@ -1,4 +1,4 @@
-package org.wahlzeit.rollingstock.location;
+package org.wahlzeit.rollingstock.model.location;
 
 import junit.framework.*;
 

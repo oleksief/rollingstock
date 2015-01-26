@@ -1,5 +1,5 @@
 
-package org.wahlzeit.rollingstock.location;
+package org.rollingstock.model.location;
 
 /**
  * @collaboration location

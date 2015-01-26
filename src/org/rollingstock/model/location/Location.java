@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.wahlzeit.rollingstock.location;
+package org.rollingstock.model.location;
 
 /**
  * An interface definition for location classes

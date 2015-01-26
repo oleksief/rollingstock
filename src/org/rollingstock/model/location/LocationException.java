@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.wahlzeit.rollingstock.location;
+package org.rollingstock.model.location;
 
 /**
  * Own exception class for Location

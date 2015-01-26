@@ -1,6 +1,6 @@
-package org.wahlzeit.rollingstock.location;
+package org.wahlzeit.rollingstock.model.location;
 
-import org.wahlzeit.rollingstock.location.CartesianLocation;
+import org.rollingstock.model.location.CartesianLocation;
 
 import junit.framework.*;
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.wahlzeit.rollingstock.model;
+package org.rollingstock.model;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -22,7 +22,7 @@ package org.wahlzeit.model;
 
 import java.util.*;
 
-import org.wahlzeit.rollingstock.model.RollingStockPhotoFactory;
+import org.rollingstock.model.RollingStockPhotoFactory;
 import org.wahlzeit.services.*;
 import org.wahlzeit.utils.*;
 

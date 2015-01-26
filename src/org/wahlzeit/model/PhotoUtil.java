@@ -26,7 +26,7 @@ import java.awt.image.*;
 
 import javax.imageio.*;
 
-import org.wahlzeit.rollingstock.model.RollingStockPhotoFactory;
+import org.rollingstock.model.RollingStockPhotoFactory;
 import org.wahlzeit.services.*;
 
 /**

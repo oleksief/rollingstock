@@ -3,6 +3,8 @@
  */
 package org.wahlzeit.rollingstock.model;
 
+import org.rollingstock.model.RollingStockSolution;
+
 import junit.framework.TestCase;
 
 /**

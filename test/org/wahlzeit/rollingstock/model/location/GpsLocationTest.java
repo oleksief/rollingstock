@@ -1,6 +1,7 @@
-package org.wahlzeit.rollingstock.location;
+package org.wahlzeit.rollingstock.model.location;
 
-import org.wahlzeit.rollingstock.location.GpsLocation;
+import org.rollingstock.model.location.GpsLocation;
+import org.rollingstock.model.location.LocationException;
 
 import junit.framework.*;
 
